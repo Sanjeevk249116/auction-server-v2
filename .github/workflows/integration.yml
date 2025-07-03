@@ -48,7 +48,7 @@ jobs:
     - run: npm i
     - run: npm run test
 
-  deploy-staging::
+  deploy-staging:
 
     runs-on: ubuntu-latest
 
