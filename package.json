@@ -2,11 +2,12 @@
   "name": "auction-server-v2",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "test": "jest"
-  },
+"scripts": {
+  "start:dev": "cross-env NODE_ENV=development nodemon index.js",
+  "start:staging": "cross-env NODE_ENV=staging nodemon index.js",
+  "start:prod": "cross-env NODE_ENV=production nodemon index.js",
+  "test": "jest"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^30.0.4",
     "supertest": "^7.1.1"
   }
