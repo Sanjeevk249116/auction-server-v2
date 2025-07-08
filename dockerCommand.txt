@@ -1,0 +1,65 @@
+1. Build Docker Image
+
+docker build -t <image-name>:<tag> .
+# Example:
+docker build -t myapp:latest .
+
+
+2. List Docker Images
+
+docker images
+
+
+3. Remove Docker Image
+
+docker rmi <image-id or image-name>
+
+
+4. Run with Port Mapping
+
+docker run -p <host-port>:<container-port> <image-name>
+# Example:
+docker run -p 3000:3000 myapp
+
+
+5. Detached Mode (Background)
+
+docker run -d <image-name>
+
+
+6. List Running Containers
+
+docker ps
+
+
+7. List All Containers (even stopped)
+
+docker ps -a
+
+
+8.  Stop a Running Container
+
+docker stop <container-id or name>
+
+9. Start a Stopped Container
+
+docker start <container-id or name>
+
+
+10. Dockerfile Common Commands
+
+| Command      | Description                                 |
+| ------------ | ------------------------------------------- |
+| `FROM`       | Base image                                  |
+| `WORKDIR`    | Set working directory inside container      |
+| `COPY`       | Copy files/directories                      |
+| `ADD`        | Like COPY, but also handles URLs and tar.gz |
+| `RUN`        | Run shell commands during build             |
+| `CMD`        | Default command to run                      |
+| `ENTRYPOINT` | Like CMD, but better for CLI tools          |
+| `EXPOSE`     | Expose a port                               |
+| `ENV`        | Set environment variables                   |
+| `VOLUME`     | Define mount point for external volume      |
+
+
+
