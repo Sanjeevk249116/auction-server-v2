@@ -9,7 +9,7 @@ jobs:
   deploy-staging:
 
     runs-on: ubuntu-latest
-    needs: build-and-test 
+
     steps:
     - uses: actions/checkout@v4
-    - run: npm i  
+    - run: npm i 
